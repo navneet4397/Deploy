@@ -1,7 +1,8 @@
 applications:
-- name: blue-cloud-mirror-Navneet4397
-  host: blue-cloud-mirror-Navneet4397
+- path: .
+  name: application_demo
   memory: 256M
-  instances: 1
-  buildpack: https://github.com/cloudfoundry/staticfile-buildpack
-  disk_quota: 1G
+  instances: 
+  command: node app
+  env:
+    CF_STAGING_TIMEOUT: 35
